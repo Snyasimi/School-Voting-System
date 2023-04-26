@@ -51,7 +51,7 @@ class Users(models.Model):
         ordering = ['FirstName']
     
 
-class Voters(models.Model):
+class Candidates(models.Model):
     User_id= models.OneToOneField(Users,primary_key=True,on_delete=models.CASCADE)
     Position = models.ForeignKey(Positions,on_delete=models.PROTECT)
     Votes = models.IntegerField()
